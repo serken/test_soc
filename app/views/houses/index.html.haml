@@ -1,0 +1,13 @@
+Houses:
+%br
+- @character.houses.each_with_index do |h, i|
+  %br
+  %div{style: "margin-left: 10px"}
+    Region:
+    = h.region
+    %br
+    Position:
+    = h.position
+    %br
+    Level
+    = h.level
