@@ -1,3 +1,4 @@
+- money_per_hour = Work::MONEY_PER_LEVEL[@work.level] if @work
 .header
   .avatar
   .summary
@@ -9,8 +10,12 @@
     = @character.level
     %br
     Money:
-    = @character.money
-
+    #character_money{'data-money' => money_per_hour}
+      = number_with_precision(@character.money, precision: 2)
+    = '(' + (money_per_hour || 0.0).to_s + 'per hour)'
+  .summary_work
+    Work:
+    = @work ? @work.level.to_s + ' level' : 'You are unemployeed'
   .nav-button#character
     Character
   .nav-button#work

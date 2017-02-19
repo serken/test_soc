@@ -1,12 +1,10 @@
-- work = @character.work
-
-- if work.present?
+- if @work.present?
   Job level:
-  = work.level
+  = @work.level
 - else
   You have no job now
 
-- if work.present?
+- if @work.present?
   .work_button#receive_money
     Receive Money
   .work_button#level_up_work

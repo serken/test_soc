@@ -1,7 +1,7 @@
 class Work < ApplicationRecord
   belongs_to :character
 
-  MONEY_PER_LEVEL = (1..10).each_with_object({}){ |i, memo|  memo[i] = 100**(i) }
+  MONEY_PER_LEVEL = ->(i) { 100 * i }
 
   def get_money
     money_to_earn = MONEY_PER_LEVEL[self.level]

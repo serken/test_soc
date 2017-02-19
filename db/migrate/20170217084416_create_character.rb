@@ -4,6 +4,7 @@ class CreateCharacter < ActiveRecord::Migration[5.0]
       t.integer :user_id, null: false
       t.string :name, null: false, index: true
       t.float :money, null: false, default: 0.0
+      t.datetime :money_update, null: false
       t.integer :level, null: false, default: 1
 
       t.timestamps

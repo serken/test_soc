@@ -13,12 +13,13 @@
 ActiveRecord::Schema.define(version: 20170218174236) do
 
   create_table "characters", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "user_id",                             null: false
-    t.string   "name",                                null: false
-    t.float    "money",      limit: 24, default: 0.0, null: false
-    t.integer  "level",                 default: 1,   null: false
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.integer  "user_id",                               null: false
+    t.string   "name",                                  null: false
+    t.float    "money",        limit: 24, default: 0.0, null: false
+    t.datetime "money_update",                          null: false
+    t.integer  "level",                   default: 1,   null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.index ["name"], name: "index_characters_on_name", using: :btree
   end
 
