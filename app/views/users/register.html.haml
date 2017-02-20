@@ -1,0 +1,14 @@
+= form_for @user do |f|
+  = f.label :login
+  = f.text_field :login
+  %br
+  = f.label :password
+  = f.text_field :password
+  %br
+  = f.label :email
+  = f.text_field :email
+  %br
+  = f.label :character_name
+  = text_field '', 'character_name'
+  %br
+  = f.submit

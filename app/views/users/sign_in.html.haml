@@ -1,0 +1,8 @@
+= form_tag '/signed_in', method: :post do
+  = label_tag :login
+  = text_field_tag :login
+  %br
+  = label_tag :password
+  = text_field_tag :password
+  %br
+  = submit_tag 'Sign In'
