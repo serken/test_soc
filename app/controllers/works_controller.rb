@@ -5,7 +5,8 @@ class WorksController < ApplicationController
   def take_a_job
     return if @work
 
-    Work.create(character_id: character.id)
+    Work.create(character_id: @character.id)
+    @character.update_attributes(money_update: Time.now.utc)
     redirect_to action: :index
   end
 
